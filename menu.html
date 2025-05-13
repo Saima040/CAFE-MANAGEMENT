@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cafe Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="menu-container">
+    <header>
+      <h1>☕ Whisk & Whirl Café </h1>
+      <p>Choose your favorite category</p>
+    </header>
+
+    <div class="menu-options">
+      <button onclick="showMenu('coffee')">Coffee</button>
+      <button onclick="showMenu('tea')">Tea</button>
+      <button onclick="showMenu('beverages')">Cold Drinks & Beverages</button>
+      <button onclick="showMenu('dessert')">Dessert</button>
+    </div>
+    <div id="menus">
+      <!-- Coffee Menu -->
+      <div id="coffee" class="menu-list hidden">
+        <h2>☕Coffee Menu</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="images/espresso.webp" alt="Espresso">
+            <h3>Espresso</h3>
+            <p>150</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/latte.jpeg" alt="Latte">
+            <h3>Latte</h3>
+            <p>180 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/americano.png" alt="Americano">
+            <h3>Americano</h3>
+            <p>160 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/cappuccino.jpeg" alt="Cappuccino">
+            <h3>Cappuccino</h3>
+            <p>180 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/mocha.jpg" alt="Mocha">
+            <h3>Mocha</h3>
+            <p>200 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+            </div> 
+          <div class="card">
+              <img src="images/cold-brew.jpg" alt="Cold Brew">
+              <h3>Cold Brew</h3>
+              <p>220 BDT</p>
+              <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+              <img src="images/IcedAmericano.jpg" alt="Iced Americano">
+              <h3>Iced Americano</h3>
+              <p>180 BDT</p>
+              <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+              <img src="images/iced-latte.jpg" alt="Iced Latte">
+              <h3>Iced Latte</h3>
+              <p>200 BDT</p>
+              <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+              <img src="images/CaramelMacchiato.jpg" alt="Latte">
+              <h3>Caramel Macchiato</h3>
+              <p>220 BDT</p>
+              <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+              <img src="images/affogato1.jpg" alt="Latte">
+              <h3>Affogato</h3>
+              <p>250 BDT</p>
+              <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/pumpkin.jpg" alt="Pumpkin">
+            <h3>Pumpkin Spice Latte</h3>
+            <p>280 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/dalgona.jpg" alt="Dalgona">
+            <h3>Dalgona</h3>
+            <p>180 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Tea Menu -->
+      <div id="tea" class="menu-list hidden">
+        <h2>🍵 Tea Menu</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="images/green.jpg" alt="Green Tea">
+            <h3>Green Tea</h3>
+            <p>70 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/milk tea.jpg" alt="Milk Tea">
+            <h3>Milk Tea</h3>
+            <p>80 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/black.jpg" alt="Black Tea">
+            <h3>Black Tea</h3>
+            <p>50 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/masala.jpg" alt="Masala Chai">
+            <h3>Masala Chai</h3>
+            <p>100 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/ginger.jpg" alt="Ginger Tea">
+            <h3>Ginger Tea</h3>
+            <p>90 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/lemon.jpg" alt="Lemon Tea">
+            <h3>Lemon Tea</h3>
+            <p>90 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/iced lemon.jpg" alt="Iced Lemon Tea">
+            <h3>Iced Lemon Tea</h3>
+            <p>120 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/matchaLatte.jpg" alt="Matcha Latte">
+            <h3>Matcha Latte</h3>
+            <p>220 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Beverages Menu -->
+      <div id="beverages" class="menu-list hidden">
+        <h2>🥤 Cold drinks and Beverages Menu</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="images/soda.jpg" alt="Fresh Lime Soda">
+            <h3>Fresh Lime Soda</h3>
+            <p>120 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/iced_chocolate.jpg" alt="Iced Chocolate">
+            <h3>Iced Chocolate</h3>
+            <p>180 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/milkshake.jpg" alt="Milkshake">
+            <h3>Milkshake</h3>
+            <p>250 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/smoothie.jpg" alt="Smoothie">
+            <h3>Smoothie</h3>
+            <p>200 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/boba1.jpg" alt="Boba Drink">
+            <h3>Boba Drink</h3>
+            <p>150 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/water.jpg" alt="Water">
+            <h3>Water (500ml)</h3>
+            <p>30 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/sparkling.jpg" alt="Sparkling Water">
+            <h3>Sparkling Water</h3>
+            <p>100 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/mojito.jpg" alt="Mojito">
+            <h3>Blue Mojito</h3>
+            <p>150 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/fruit.jpg" alt="Fruit Punch">
+            <h3>Tropical Fruit Punch</h3>
+            <p>280 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/olipops.jpg" alt="Olipop">
+            <h3>Olipops</h3>
+            <p>300 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/softDrink.jpg" alt="Soft Drinks">
+            <h3>Soft Drinks (Can)</h3>
+            <p>50 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dessert Menu -->
+      <div id="dessert" class="menu-list hidden">
+        <h2>🧁Dessert Menu</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="images/lava.jpg" alt="Cake">
+            <h3>Chocolate Lava Cake</h3>
+            <p>150 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/brownie.jpg" alt="Brownie">
+            <h3>Brownie</h3>
+            <p>120 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/cheesecake.jpg" alt="Cheesecake">
+            <h3>Cheesecake</h3>
+            <p>250 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/doughnut.jpg" alt="Doughnut">
+            <h3>Doughnut </h3>
+            <p>80 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/muffin.jpg" alt="Muffin">
+            <h3>Muffin</h3>
+            <p>100 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/croissant.jpg" alt="Croissant">
+            <h3>Croissant</h3>
+            <p>130 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/roll.jpg" alt="Roll">
+            <h3>Cinnamon Roll</h3>
+            <p>130 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/icecream.jpg" alt="Ice cream">
+            <h3>Ice Cream (2 scoops)</h3>
+            <p>150 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/waffle.jpg" alt="waffle">
+            <h3>Waffle</h3>
+            <p>200 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/pancake.jpg" alt="Pancake">
+            <h3>Pancake</h3>
+            <p>220 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/cookie.jpg" alt="cookie">
+            <h3>Chocolate Chip Cookies</h3>
+            <p>120 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/swiss.jpg" alt="swiss">
+            <h3>Swiss roll</h3>
+            <p>180 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/dubai.jpg" alt="Dubai">
+            <h3>Dubai Strawberry Chocolate</h3>
+            <p>250 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+          <div class="card">
+            <img src="images/dalgona_candy.jpg" alt="candy">
+            <h3>Dalgona Candy</h3>
+            <p>100 BDT</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cart">
+    <h2>Your Cart</h2>
+    <div class="cart-placeholder">🛒 Your cart is empty</div>
+    <ul id="cart-items">
+      <!-- Placeholder for dynamic items -->
+      <!-- Example with quantity -->
+      <!-- <li>Latte (x2) - $8</li> -->
+    </ul>
+    <p id="total">Total: $0.00</p>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+  <script src="script.js"></script>
+
+
+</body>
+</html>

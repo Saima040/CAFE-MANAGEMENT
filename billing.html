@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Billing Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fef9f4;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+    }
+    .bill-container {
+      background-color: #fff;
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #6d4c41;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+    }
+    .total {
+      text-align: right;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 1rem 0;
+    }
+    .print-btn {
+      display: block;
+      width: 100%;
+      padding: 0.8rem;
+      background-color: #6d4c41;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    .print-btn:hover {
+      background-color: #3e2f24;
+    }
+
+    @media print {
+      .print-btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bill-container">
+  <h1>☕ Sweet Home Cafe</h1>
+  <p>Date: <span id="bill-date"></span></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Qty</th>
+        <th>Unit Price (BDT)</th>
+        <th>Total (BDT)</th>
+      </tr>
+    </thead>
+    <tbody id="bill-body">
+      <!-- Items will be inserted here by JS -->
+    </tbody>
+  </table>
+  <div class="total" id="total-amount">Total: 0 BDT</div>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Bill</button>
+</div>
+
+<script>
+  // Sample data - replace this with dynamic cart data if available
+  const cartItems = [
+    { name: "Latte", qty: 2, price: 180 },
+    { name: "Brownie", qty: 1, price: 120 },
+    { name: "Iced Lemon Tea", qty: 1, price: 120 }
+  ];
+
+  const billBody = document.getElementById("bill-body");
+  const totalAmount = document.getElementById("total-amount");
+  const today = new Date();
+  document.getElementById("bill-date").textContent = today.toLocaleDateString();
+
+  let total = 0;
+  cartItems.forEach(item => {
+    const row = document.createElement("tr");
+    const itemTotal = item.qty * item.price;
+    total += itemTotal;
+
+    row.innerHTML = `
+      <td>${item.name}</td>
+      <td>${item.qty}</td>
+      <td>${item.price}</td>
+      <td>${itemTotal}</td>
+    `;
+    billBody.appendChild(row);
+  });
+
+  totalAmount.textContent = `Total: ${total} BDT`;
+</script>
+
+</body>
+</html>
